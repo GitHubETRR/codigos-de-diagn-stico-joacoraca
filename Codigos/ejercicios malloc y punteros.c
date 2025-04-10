@@ -1,12 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void imprimirNum (int *cant, int *num){
-    printf("\nLos números ingresados son:\n");
-    for (int i = 0; i < cant; i++) {
-        printf("%d ", num[i]);
-    }
-}
+void imprimirNum (int *cant, int *num);
 
 int main() {
     int *numeros;
@@ -25,4 +20,10 @@ int main() {
     imprimirNum (&cantidad, &numeros);
     free(numeros);
     return 0;
+}
+void imprimirNum (int *cant, int *num){
+    printf("\nLos números ingresados son:\n");
+    for (int i = 0; i < cant; i++) {
+        printf("%d ", num[i]);
+    }
 }
