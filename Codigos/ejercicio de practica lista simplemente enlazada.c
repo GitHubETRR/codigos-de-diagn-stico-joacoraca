@@ -6,41 +6,54 @@ struct Nodo {
     struct Nodo* siguiente;
 };
 
-int main() {
-    struct Nodo* apuntaInicio = NULL;
-    struct Nodo* actual = NULL;
-    int numero;
+struct Nodo* agregarAlFinal(struct Nodo* apuntaInicio, int valor) {
+    struct Nodo* nuevo = (struct Nodo*) malloc(sizeof(struct Nodo));
+    nuevo->dato = valor;
+    nuevo->siguiente = NULL;
 
-    printf("Ingresá números (0 para terminar):\n");
+    if (apuntaInicio == NULL) {
+        printf("No hay ninguna lista en la que se haya guardado algo \n");
+        return nuevo;
+    }
 
-    do {
-        printf("Número: ");
-        scanf("%d", &numero);
-
-        if (numero != 0) {
-            struct Nodo* nuevo = malloc(sizeof(struct Nodo));
-            nuevo->dato = numero;
-            nuevo->siguiente = NULL;
-            actual->siguiente = nuevo;
-            actual = nuevo;
-        }
-    } while (numero != 0);
-
-    printf("\nNúmeros guardados en la lista:\n");
-    actual = apuntaInicio;
-
-    while (actual != NULL) {
-        printf("%d ", actual->dato);
+    struct Nodo* actual = apuntaInicio;
+    while (actual->siguiente != NULL) {
         actual = actual->siguiente;
     }
-    printf("\n");
+    actual->siguiente = nuevo;
 
-    actual = apuntaInicio;
+    return apuntaInicio;
+}
+
+void mostrarLista(struct Nodo* apuntaInicio) {
+    struct Nodo* actual = apuntaInicio;
+    printf("Lista: ");
     while (actual != NULL) {
-        struct Nodo* temp = actual;
+        printf("%d -> ", actual->dato);
         actual = actual->siguiente;
+    }
+    printf("NULL\n");
+}
+
+void liberarLista(struct Nodo* apuntaInicio) {
+    struct Nodo* temp;
+    while (apuntaInicio != NULL) {
+        temp = apuntaInicio;
+        apuntaInicio = apuntaInicio->siguiente;
         free(temp);
     }
-
-    return 0;
 }
+
+int main() {
+    struct Nodo* lista = NULL;
+    int valor, opcion;
+    do {
+        printf("Ingresá un número: ");
+        scanf("%d", &valor);
+        lista = agregarAlFinal(lista, valor);
+        printf("Querés agregar otro número? si (1)/no (2): ");
+        scanf(" %d ", &opcion);  
+    } while (opcion == 1 );
+    mostrarLista(lista);
+    liberarLista(lista);
+    return 0;
