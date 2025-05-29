@@ -13,7 +13,7 @@ int main() {
     fclose(archivo);
     archivo = fopen("archivo.txt", "r");
     if (archivo == NULL) {
-        printf("No se pudo abrio bien el archivo\n");
+        printf("No se pudo abrir bien el archivo\n");
         return 1;
     }
     printf("Contenido:\n");
