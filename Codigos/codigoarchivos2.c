@@ -7,7 +7,7 @@ int main() {
     char nombre[80];
 
     do {
-        printf("\n--- MENÚ ---\n");
+        printf("\n   MENÚ    \n");
         printf("1. Agregar estudiante\n");
         printf("2. Ver estudiantes\n");
         printf("3. Salir\n");
