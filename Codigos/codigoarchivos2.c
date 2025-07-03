@@ -5,16 +5,15 @@
 int main() {
     int opcion;
     char nombre[80];
-
     do {
-        printf("\n   MENÚ    \n");
-        printf("1. Agregar estudiante\n");
-        printf("2. Ver estudiantes\n");
-        printf("3. Salir\n");
-        printf("Opción: ");
+        printf("\n    MENÚ    \n"
+               "1. Agregar estudiante\n"
+               "2. Ver estudiantes\n"
+               "3. Salir\n"
+               "Opción: ");
         scanf("%d", &opcion);
-        getchar();
-        if (opcion == 1) {
+        switch (opcion) {
+        case 1: {
             printf("Nombre del estudiante: ");
             fgets(nombre, sizeof(nombre), stdin);
 
@@ -26,27 +25,29 @@ int main() {
             fputs(nombre, f);
             fclose(f);
             printf("Estudiante guardado.\n");
-
-        } else if (opcion == 2) {
+            break;
+        }
+        case 2: {
             FILE *f = fopen(ARCHIVO, "r");
             if (f == NULL) {
                 printf("No hay estudiantes guardados.\n");
-            } else {
-                printf("\nLista de estudiantes:\n");
-                while (fgets(nombre, sizeof(nombre), f)) {
-                    printf("%s", nombre);
-                }
-                fclose(f);
+                break;
             }
+            printf("\nLista de estudiantes:\n");
+            while (fgets(nombre, sizeof(nombre), f))
+                printf("%s", nombre);
+            fclose(f);
+            break;
+        }
+        case 3:
+            printf("Saliendo\n");
+            break;
 
-        } else if (opcion == 3) {
-            printf("Saliendo...\n");
-        } else {
+        default:
             printf("Opción inválida.\n");
         }
 
     } while (opcion != 3);
-
     return 0;
 }
 
