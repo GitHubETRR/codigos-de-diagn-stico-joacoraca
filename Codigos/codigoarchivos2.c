@@ -36,7 +36,7 @@ int main() {
             }
             printf("\nLista de alumnos:\n");
             while (fgets(nombre, sizeof(nombre), f))
-                printf("%c", nombre);
+                printf("%s", nombre);
             fclose(f);
             break;
         }
