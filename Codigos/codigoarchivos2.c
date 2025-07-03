@@ -45,7 +45,7 @@ int main() {
             break;
 
         default:
-            printf("Opción inválida.\n");
+            printf("Esta opcion es invalida\n");
         }
 
     } while (opcion != 3);
