@@ -13,7 +13,7 @@ void mostrarProductos (int cantidad, productos_t* lista);
 
 int main() {
     int cantidadProductos;
-    printf("Bienvenido, ¿Cuántos productos quieres almacenar? ");
+    printf("Bienvenido, ¿Cuántos productos queres almacenar? ");
     scanf("%d", &cantidadProductos);
     productos_t* lista = cargarProductos(cantidadProductos);
     mostrarProductos(cantidadProductos, lista);
