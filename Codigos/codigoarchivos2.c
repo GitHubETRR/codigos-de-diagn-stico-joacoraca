@@ -16,7 +16,7 @@ int main() {
         switch (opcion) {
         case 1: {
             printf("Nombre del alumno: ");
-            fgets(nombre, sizeof(nombre), stdin);
+            scanf("%c", &nombre)
 
             FILE *f = fopen(ARCHIVO, "a");
             if (f == NULL) {
