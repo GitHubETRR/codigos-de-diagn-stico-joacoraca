@@ -8,9 +8,9 @@ int main() {
     char nombre[CAR_MAX];
     do {
         printf("\n    MENÚ    \n"
-               "1. Agregar estudiante\n"
-               "2. Ver estudiantes\n"
-               "3. Salir\n"
+               "1) Agregar estudiante\n"
+               "2) Ver estudiantes\n"
+               "3) Salir\n"
                "Opción: ");
         scanf("%d", &opcion);
         switch (opcion) {
