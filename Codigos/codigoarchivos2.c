@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define ARCHIVO "estudiantes.txt"
+#define CAR_MAX 50
 
 int main() {
     int opcion;
-    char nombre[80];
+    char nombre[CAR_MAX];
     do {
         printf("\n    MENÚ    \n"
                "1. Agregar estudiante\n"
@@ -14,7 +15,7 @@ int main() {
         scanf("%d", &opcion);
         switch (opcion) {
         case 1: {
-            printf("Nombre del estudiante: ");
+            printf("Nombre del alumno: ");
             fgets(nombre, sizeof(nombre), stdin);
 
             FILE *f = fopen(ARCHIVO, "a");
@@ -24,16 +25,16 @@ int main() {
             }
             fputs(nombre, f);
             fclose(f);
-            printf("Estudiante guardado.\n");
+            printf("Tu alumno se guardó\n");
             break;
         }
         case 2: {
             FILE *f = fopen(ARCHIVO, "r");
             if (f == NULL) {
-                printf("No hay estudiantes guardados.\n");
+                printf("No hay alumnos guardados.\n");
                 break;
             }
-            printf("\nLista de estudiantes:\n");
+            printf("\nLista de alumnos:\n");
             while (fgets(nombre, sizeof(nombre), f))
                 printf("%s", nombre);
             fclose(f);
