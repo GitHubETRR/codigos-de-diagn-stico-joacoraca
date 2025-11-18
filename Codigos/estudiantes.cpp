@@ -33,7 +33,7 @@ public:
 
 int main() {
     int cantidad;
-    cout << "¿Cuántos estudiantes querés cargar?: ";
+    cout << "Ingresa cuantos estudiantes queres: ";
     cin >> cantidad;
     Estudiante lista[cantidad];
     for (int i = 0; i < cantidad; i++) {
@@ -57,3 +57,4 @@ int main() {
     }
     return 0;
 }
+
