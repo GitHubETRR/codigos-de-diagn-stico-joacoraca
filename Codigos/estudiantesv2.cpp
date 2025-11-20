@@ -40,9 +40,9 @@ public:
     }
     //mostrar datos
     void mostrar() {
-        cout << "Nombre: " << nombre 
-             << " | Edad: " << edad
-             << " | Promedio: " << promedio << endl;
+        cout << "Nombre: \n" << nombre 
+             << "Edad: \n" << edad
+             << "Promedio: \n" << promedio << endl;
     }
     //lee el primer estudiante del archivo
     void leer() {
@@ -59,3 +59,4 @@ int main() {
 
     return 0;
 }
+
