@@ -6,7 +6,6 @@ class Persona {
 protected:
     string nombre;
     int edad;
-
 public:
     Persona(string n, int e) {
         nombre = n;
@@ -89,5 +88,6 @@ int main() {
     } while (opcion != 3);
     return 0;
 }
+
 
 
