@@ -12,7 +12,7 @@ public:
         edad = e;
     }
 
-    Persona() {   // constructor vacio
+    Persona() {
         nombre = "";
         edad = 0;
     }
@@ -23,28 +23,23 @@ private:
     float promedio;
 
 public:
-    //constructor 
     Estudiante(string n, int e, float p) : Persona(n, e) {
         promedio = p;
     }
-    //constructor vacio
     Estudiante() : Persona() {
         promedio = 0;
     }
-    //guarda datos en el archivo
     void guardar() {
         ofstream archivo("datos.txt", ios::app);
         archivo << nombre << " " << edad << " " << promedio << endl;
         archivo.close();
     }
-    //muestra datos
     void mostrar() {
         cout << "Nombre: " << nombre 
              << " | Edad: " << edad
              << " | Promedio: " << promedio << endl;
     }
 
-    //lee el primer estudiante del archivo
     void leer() {
         ifstream archivo("datos.txt");
         archivo >> nombre >> edad >> promedio;
@@ -88,6 +83,7 @@ int main() {
     } while (opcion != 3);
     return 0;
 }
+
 
 
 
