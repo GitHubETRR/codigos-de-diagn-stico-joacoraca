@@ -65,8 +65,8 @@ for i in range(rondas):
     print(pregunta["pregunta"])
 
     opciones = pregunta["opciones"]
-    for idx, op in enumerate(opciones):
-        print(f"{idx+1}) {op}")
+    for ind, op in enumerate(opciones):
+        print(f"{ind+1}) {op}")
 
     resp = input("Tu respuesta (1, 2 o 3): ")
 
@@ -82,6 +82,7 @@ for i in range(rondas):
         print(f"Incorrecto. La respuesta era: {pregunta["correcta"]}\n")
 
 print(f"Termino el juego. Tu puntaje es de: {puntos}/{rondas}")
+
 
 
 
