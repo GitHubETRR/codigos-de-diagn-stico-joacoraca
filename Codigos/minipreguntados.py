@@ -79,7 +79,8 @@ for i in range(rondas):
         print("Bien, respuesta correcta +1 punto\n")
         puntos += 1
     else:
-        print(f"Incorrecto. La respuesta era: {pregunta['correcta']}\n")
+        print(f"Incorrecto. La respuesta era: {pregunta["correcta"]}\n")
 
 print(f"Juego terminado. Tu puntaje final es: {puntos}/{rondas}")
+
 
