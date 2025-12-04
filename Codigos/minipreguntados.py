@@ -70,7 +70,6 @@ for i in range(rondas):
 
     resp = input("Tu respuesta (1, 2 o 3): ")
 
-    # Validación
     while resp not in ["1", "2", "3"]:
         resp = input("No existe esa opción, elegí entre 1, 2 o 3.")
 
@@ -83,3 +82,4 @@ for i in range(rondas):
         print(f"Incorrecto. La respuesta era: {pregunta['correcta']}\n")
 
 print(f"Juego terminado. Tu puntaje final es: {puntos}/{rondas}")
+
