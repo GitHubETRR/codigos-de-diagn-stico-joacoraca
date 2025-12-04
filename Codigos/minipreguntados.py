@@ -9,8 +9,8 @@ preguntas = {
         },
         {
             "pregunta": "¿Qué gas respiramos principalmente?",
-            "opciones": ["Oxígeno", "Nitrógeno", "Hidrógeno"],
-            "correcta": "Nitrógeno"
+            "opciones": ["Oxigeno", "Nitrogeno", "Hidrogeno"],
+            "correcta": "Nitrogeno"
         }
     ],
     "Historia": [
@@ -20,26 +20,26 @@ preguntas = {
             "correcta": "1969"
         },
         {
-            "pregunta": "¿Quién fue el primer emperador romano?",
-            "opciones": ["Nerón", "Augusto", "César"],
-            "correcta": "Augusto"
+            "pregunta": "¿Quién fue el libertador de Argentina, Chile y Perú?",
+            "opciones": ["Bolivar", "San Martin", "Belgrano"],
+            "correcta": "San Martin"
         }
     ],
     "Deportes": [
         {
-            "pregunta": "¿Cuántos jugadores tiene un equipo de fútbol?",
-            "opciones": ["11", "9", "7"],
-            "correcta": "11"
+            "pregunta": "¿Cual fue el resultado de la final del mundo 2018 (Francia vs Croacia)?",
+            "opciones": ["4-2", "2-0", "3-1"],
+            "correcta": "4-2"
         },
         {
-            "pregunta": "¿En qué deporte se utiliza una raqueta?",
-            "opciones": ["Tenis", "Boxeo", "Natación"],
-            "correcta": "Tenis"
+            "pregunta": "¿Quien es la persona que mas balones de oro tiene en futbol?",
+            "opciones": ["Ronaldo", "Messi", "Platini"],
+            "correcta": "Messi"
         }
     ],
     "Videojuegos": [
         {
-            "pregunta": "¿Qué juego popular usa la frase Victory Royale al ganar?",
+            "pregunta": "¿Qué juego usa la frase Victory Royale al ganar?",
             "opciones": ["PUBG", "Fortnite", "Free Fire"],
             "correcta": "Fortnite"
         },
@@ -60,7 +60,7 @@ for i in range(rondas):
     categoria = random.choice(list(preguntas.keys()))
     pregunta = random.choice(preguntas[categoria])
 
-    print(f"Ronda {i+1}")
+    print(f"\nRonda {i+1}")
     print(f"Categoría: {categoria}")
     print(pregunta["pregunta"])
 
@@ -81,6 +81,7 @@ for i in range(rondas):
     else:
         print(f"Incorrecto. La respuesta era: {pregunta["correcta"]}\n")
 
-print(f"Juego terminado. Tu puntaje final es: {puntos}/{rondas}")
+print(f"Termino el juego. Tu puntaje es de: {puntos}/{rondas}")
+
 
 
