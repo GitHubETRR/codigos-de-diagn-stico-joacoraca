@@ -57,7 +57,7 @@ public:
 };
 
 int main(){
-    Computadora pc1("Lenovo", 2020, "ThinkPad X1");
+    Computadora pc1("Lenovo", 2020, "ThinkPad");
     Celular cel1("Samsung", 2023, "Galaxy A54 5g");
     cout << "|   Información de la computadora   |" << endl;
     pc1.mostrarInfo();
@@ -71,3 +71,4 @@ int main(){
 
     return 0;
 }
+
